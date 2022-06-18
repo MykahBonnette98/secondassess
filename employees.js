@@ -22,7 +22,7 @@
 //CODE HERE
 //not sure why its not working?
 
-class Employee = {
+class Employee {
     constructor(name, shifts) {
         this.name = name
         this.shifts = shifts
@@ -70,9 +70,9 @@ emp0ne.getSchedule()
 */
 
 //CODE HERE
-const emTwo = {...emp0ne}
+const empTwo = {...emp0ne}
 empTwo.name = 'nick'
-console.log(emTwo)
+console.log(empTwo)
 
 
 
@@ -100,7 +100,7 @@ console.log(emTwo)
 */
 
 //CODE HERE
-class manager extends Employee {
+class Manager extends Employee {
     constructor(name, shifts, employees) {
         super(name, shifts)
         this.employees = employees
@@ -127,7 +127,7 @@ class manager extends Employee {
 */
 
 //CODE HERE
-const manager =  newManager('Winston','weekday mornings',('cece',schmidt'))
+const manager =  new Manager('Winston','weekday mornings',['cece', 'schmidt'])
 
 
 /*

@@ -34,11 +34,11 @@
 
  const pizza = {
     name: 'cheese',
-    price: '5',
+    price: 5,
     category: 'meal',
-    popularity: '8',
-    rating: '9',
-    tags: ('Family','large'),
+    popularity: 8,
+    rating: 9,
+    tags: ['Family','large'],
 }
 
 
@@ -78,8 +78,8 @@
 */
 
 //CODE HERE
-
-let price = pizza.price
+let {price} = pizza
+// let price = pizza.price
 console.log(price)
 
 
@@ -91,8 +91,8 @@ console.log(price)
 */
 
 //CODE HERE
-
- let category = pizza.category
+let {category} = pizza
+//  let category = pizza.category
 console.log(category)
 
 
@@ -115,37 +115,37 @@ console.log(category)
     {
         
     name: 'pizza',
-    price: '5',
+    price: 5,
     category: 'meal',
-    popularity: '8',
-    rating: '9',
+    popularity: 8,
+    rating: 9,
     tags: ['family','large'],
-}
+},
 {
     name: 'salad',
-    price: '4',
+    price: 4,
     category: 'meal',
-    popularity: '7',
-    rating: '5',
+    popularity: 7,
+    rating: 5,
     tags: ['family','large'],
 
-}
+},
 {
     name: 'pancakes',
-    price: '6',
+    price: 6,
     category: 'breakfast',
-    popularity: '6',
-    rating: '9',
+    popularity: 6,
+    rating: 9,
     tags: ['family','large'],
-}
+},
 {
     name: 'steak',
-    price: '12',
+    price: 12,
     category: 'dinner',
-    popularity: '8',
-    rating: '9',
+    popularity: 8,
+    rating: 9,
     tags: ['family','large'],
-}
+},
     
 ]
 
@@ -164,14 +164,12 @@ console.log(category)
 */
 
 //CODE HERE
+function callback(element) {
+    return element.tags.includes('popular')
+}
 
-const filteredFood = foodArr.filter(tags)
-console.log(tags)
-
- function callback(element){
-     reutrn 
- }
- console.log(element)
+const filteredFood = foodArr.filter(callback)
+console.log(filteredFood)
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
@@ -224,6 +222,7 @@ const filterByProperty = function(property, number, type) {
                  return element[property] < number
          }
      })
+     return filteredArr
  }
 
 
@@ -237,4 +236,4 @@ const filterByProperty = function(property, number, type) {
 */
 
 //CODE HERE
-console.log(filterByProperty('popularity', below'))
+console.log(filterByProperty('popularity', 8, 'below'))

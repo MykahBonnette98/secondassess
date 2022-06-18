@@ -22,17 +22,10 @@
 */
 
 //CODE HERE
-//  function greetUser(userName) {
-//      userName = String(userName)
-//      console.log(`Welcome back, ${userName}`)
-//  }
-//  greetUser('Andrew')
  
-  greetUser = userName => 'Welcome back, ${userName}'; {
-     userName = String('Andrew')
-     console.log(`Welcome back, ${userName}`) 
+   const greetUser = username => `Welcome back, ${username}`; {
+     console.log(greetUser("Mykah")) 
   }
- greetuser = ('Andrew')
  
    
 
@@ -61,7 +54,7 @@
      if (deliveryAreaZipCodes.includes(zipCode)) {
         return 'youre in our delivery zone!'
         } else {
-            return 'sorry we cant deliver to that address'
+            return 'sorry we cant deliver to that address.'
         }
     }
     console.log(canWeDeliver(84004))
@@ -86,11 +79,13 @@
 
 // CODE HERE
 function canWeDeliverTwo(zipCode) {
+
     for (i = 0; i < deliveryAreaZipCodes.length; i++) {
         if (deliveryAreaZipCodes[i] === zipCode) {
             return 'youre in our delivery zone!'
         }
     }
+    return 'Youre not in our delivery zone.'
 }
 console.log(canWeDeliverTwo(84004))
 
